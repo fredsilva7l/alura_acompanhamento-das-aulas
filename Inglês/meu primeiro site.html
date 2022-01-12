@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+    	<title>Aprendendo Inglês</title>
+    	<meta charset="utf-8"/>
+	</head>
+
+	<body>
+		<h1>Primeiro vamos aprender o ALFABETO</h1>
+		<p>Para isso você precisa escrever como se lê cada letra!</p>
+		<input/>
+		<button>Como se fala a primeira letra do alfabeto?</button>
+
+		<script>
+			var alfabeto = ["ei","bi","si"];
+
+			var input = document.querySelector("input");
+        	input.focus();
+
+    		function verifica() 
+    		{
+    			for(var letra=0; letra<alfabeto.length; letra++)
+    			{
+    				if(input.value == alfabeto[letra]) 
+        			{
+        			alert("Você ACERTOU!");
+        			break;
+        			} 
+        			else 
+        			{
+        			alert("Você ERROU!!!!!!!!");
+        			break;
+        			}
+
+               		input.value = "";
+                	input.focus();
+    			}
+   			}
+
+   			var button = document.querySelector("button");
+   			button.onclick = verifica;
+    		
+			
+		</script>
+	</body>
+</html>
+
