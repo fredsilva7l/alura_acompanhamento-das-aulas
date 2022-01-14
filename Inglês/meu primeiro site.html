@@ -10,49 +10,48 @@
 		<h1>Primeiro vamos aprender o ALFABETO</h1>
 		<p>Para isso você precisa escrever como se lê cada letra!</p>
 		<input/>
-		<button>Como se fala A em inglês?</button></br>
-
-		<input/>
-		<button>Como se fala B em inglês?</button></br>
-
-		<input/>
-		<button>Como se fala C em inglês?</button></br>
-
-		<input/>
-		<button>Como se fala D em inglês?</button></br>
-
+		<button>Click</button></br>
 
 		<script>
-			var alfabeto = ["ei","bi","si"];
+			//var alfabeto[3][2] = [["A","ei"],["B","bi"],["C","si"]];
+			var alfabeto= [[3,2,1],[9,8,7]];
+
+			var auxiliar = -1;
 
 			var input = document.querySelector("input");
         	input.focus();
 
+        	alert("escreva a 1° do alfabeto");
+
     		function verifica() 
-    		{
-    			for(var letra=0; letra<alfabeto.length; letra++)
-    			{
-    				if(input.value == alfabeto[letra]) 
+    		{	
+    				alert("escreva a " + (auxiliar + 1) + "° do alfabeto");
+    				if(input.value == alfabeto[auxiliar,(auxiliar+1)]) 
         			{
         			alert("Você ACERTOU!");
-        			break;
+        			contador();
         			} 
         			else 
         			{
-        			alert("Você ERROU!!!!!!!!");
-        			break;
+        			alert("Você ERROU!!!");
         			}
 
                		input.value = "";
                 	input.focus();
-    			}
    			}
 
+   			function contador()
+   			{
+   				auxiliar++;
+   				return auxiliar;
+   			}
+
+   			contador(auxiliar);
    			var button = document.querySelector("button");
    			button.onclick = verifica;
     		
-			
 		</script>
 	</body>
 </html>
+
 
