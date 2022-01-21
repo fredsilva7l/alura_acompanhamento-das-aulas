@@ -10,7 +10,7 @@
 		<center>
 			<h1>Vamos praticar a pronuncia de cada letra do alfabeto em inglês</h1>
 			<input/>
-			<button>Click</button></br>
+			 <button style="background-color:blue; border-color:blue; color:white" id="button">Click</button></br>
 		</center>
 
 		<script>
@@ -22,7 +22,7 @@
 			var input = document.querySelector("input");
         	input.focus();
 
-        	alert("Escreva a pronuncia de A em inglês");
+
 
     		function verifica() 
     		{	
@@ -31,17 +31,17 @@
         					contador();
         					if (auxiliar == alfabeto.length )
         					{
-        						alert("Parabéns você acertou tudo! Você pode tentar novamente se quiser");
+        						button.textContent = "Parabéns você acertou tudo! Você pode tentar novamente se quiser";
         						auxiliar =0;
         						input.value = "";
-                				input.focus();
+                		input.focus();
         						return auxiliar;
         					}
-        					alert("Você acertou! Agora escreva a pronuncia de " + (alfabeto[auxiliar]) + " em inglês");
+        					button.textContent = ("Você acertou! Escreva a pronuncia de " + (alfabeto[auxiliar]));
         				} 
         			else 
         			{
-        				alert("Você ERROU! Escreva a pronuncia de " + (alfabeto[auxiliar]) + " em inglês");
+        				button.textContent = ("Você ERROU! Escreva a pronuncia de " + (alfabeto[auxiliar]));
         			}
     				
                		input.value = "";
@@ -54,7 +54,8 @@
    				return auxiliar;
    			}
 
-   			var button = document.querySelector("button");
+   			var button = document.querySelector("#button");
+        button.textContent = "Escreva a pronuncia de A em inglês";
    			button.onclick = verifica;		
 		</script>
 		

@@ -1,1 +1,1 @@
-var input = documentQuerySelector("input");
+var input = documentQuerySelector("#input1");
