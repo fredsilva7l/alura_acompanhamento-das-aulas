@@ -249,6 +249,10 @@ td, th {
 	margin: 2em auto;
 }
 
+.main{
+	padding-left: 15px;
+}
+
 @media screen and (max-width: 480px) {
 	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
 		width: auto;
