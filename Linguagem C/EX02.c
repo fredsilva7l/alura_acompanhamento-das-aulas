@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 int main() {
-  int n;
+  int numero;
   printf("Digite um numero: ");
-  scanf("%d", & n);
-  if (n % 2 == 0) {
+  scanf("%d", & numero);
+  if (numero % 2 == 0) {
     printf("numero par!");
   } else {
     printf("numero impar!");
