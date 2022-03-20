@@ -4,8 +4,8 @@
 
 int main() {
   int numero, i;
-  printf("Digite a opcao\n1 - n = (++i) +i *(i+1)\n2 - n = (i++) +i *(i+1)\n3 - n = 1*(i+1) + (++i)\n4 - n = 1*(i+1) + (i++)\n", n);
-  scanf("%d", & n);
+  printf("Digite a opcao\n1 - n = (++i) +i *(i+1)\n2 - n = (i++) +i *(i+1)\n3 - n = 1*(i+1) + (++i)\n4 - n = 1*(i+1) + (i++)\n", numero);
+  scanf("%d", & numero);
 
   if (numero == 1) {
     printf("O valor e:", numero = (++i) + i * (i + 1));
