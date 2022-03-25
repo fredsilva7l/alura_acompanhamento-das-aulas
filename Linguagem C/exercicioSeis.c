@@ -1,12 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    float numerador = 1, denominador = 1, resultado = 0;
-    while (numerador < 100) {
-        resultado += (numerador / denominador);
-        numerador += 2;
-        denominador++;
-    }
-    printf("O resultado e: %f \n", resultado);
+    int enesimoTermo = 0;
+    float harmonico = 0;
+    printf("Escreva qual enesimo termo quer calcular da serie harmonica: \n");
+    scanf("%d", & enesimoTermo);
+    for (float i = 1; i <= enesimoTermo; i++) harmonico += (1 / i);
+    printf("resultado e %f \n", harmonico);
     return 0;
 }
