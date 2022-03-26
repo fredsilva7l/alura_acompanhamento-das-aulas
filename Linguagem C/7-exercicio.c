@@ -8,5 +8,6 @@ int main() {
         denominador++;
     }
     printf("O resultado e: %f \n", resultado);
+
     return 0;
 }
