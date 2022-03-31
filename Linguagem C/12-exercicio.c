@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int termoAnterior = 0, termoPosterior = 1, futuroTermo = 0, enesimoTermo = 0;
+    int termoAnterior = 0, termoPosterior = 1, somador = 0, enesimoTermo = 0;
 
     printf("Qual enesimo Termo de fibonasi deseja calcular? \n");
     scanf("%d", & enesimoTermo);
@@ -10,9 +10,9 @@ int main() {
     else if (enesimoTermo == 1) printf("O segundo termo e 1 \n");
     else
         for (int i = 2; i < enesimoTermo; i++) {
-            futuroTermo = termoAnterior + termoPosterior;
+            somador = termoAnterior + termoPosterior;
             termoAnterior = termoPosterior;
-            termoPosterior = futuroTermo;
+            termoPosterior = somador;
         }
     printf("O enesimo termo de fibonasi e %d \n", termoPosterior);
 
