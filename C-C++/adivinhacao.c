@@ -1,7 +1,5 @@
 #include <stdio.h>
-
 #include <stdlib.h>
-
 #include <time.h>
 
 int main() {
@@ -19,16 +17,15 @@ int main() {
     int segundos = time(0);
     srand(segundos);
 
-    int numerogrande = rand();
+    int numeroGrande = rand();
 
-    int numerosecreto = numerogrande % 100;
+    int numeroSecreto = numeroGrande % 100;
     int chute;
     int tentativas = 1;
     double pontos = 1000;
-
     int acertou = 0;
-
     int nivel;
+
     printf("Qual o nivel de dificuldade?\n");
     printf("(1) Facil (2) Medio (3) Difecil\n\n");
     printf("Escolha: ");
@@ -61,8 +58,8 @@ int main() {
             continue;
         }
 
-        acertou = (chute == numerosecreto);
-        int maior = chute > numerosecreto;
+        acertou = (chute == numeroSecreto);
+        int maior = chute > numeroSecreto;
 
         if (acertou) break;
         else if (maior) printf("Seu chute foi maior que o numero secreto\n");
@@ -70,14 +67,13 @@ int main() {
 
         tentativas++;
 
-        double pontosperdidos = abs(chute - numerosecreto) / (double) 2.0;
-        pontos = pontos - pontosperdidos;
+        double pontosPerdidos = abs(chute - numeroSecreto) / (double) 2.0;
+        pontos = pontos - pontosPerdidos;
     }
 
     printf("Fim de jogo!\n");
 
     if (acertou) {
-
         printf("\n\n");
         printf("             OOOOOOOOOOO               \n");
         printf("         OOOOOOOOOOOOOOOOOOO           \n");
@@ -95,14 +91,12 @@ int main() {
         printf("         OOOOOO         OOOOOO         \n");
         printf("             OOOOOOOOOOOO              \n");
         printf("\n\n");
-
         printf("Voce ganhou!\n");
         printf("Voce acertou em %d tentativas!\n", tentativas);
         printf("Total de pontos: %.1f\n", pontos);
     } else {
 
         printf("Você perdeu! Tente de novo!\n");
-
         printf("\n\n");
         printf("       \\|/ ____ \\|/    \n");
         printf("        @~/ ,. \\~@      \n");
