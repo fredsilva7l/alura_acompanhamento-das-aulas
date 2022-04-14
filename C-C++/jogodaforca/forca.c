@@ -21,7 +21,6 @@ int chuteserrados() {
     int erros = 0;
 
     for (int i = 0; i < chutesdados; i++) {
-
         if (!letraexiste(chutes[i])) erros++;
     }
 
@@ -34,9 +33,7 @@ int enforcou() {
 
 int ganhou() {
     for (int i = 0; i < strlen(palavrasecreta); i++) {
-        if (!jachutou(palavrasecreta[i])) {
-            return 0;
-        }
+        if (!jachutou(palavrasecreta[i])) return 0;
     }
 
     return 1;
@@ -54,11 +51,8 @@ void chuta() {
     printf("Qual letra? ");
     scanf(" %c", & chute);
 
-    if (letraexiste(chute)) {
-        printf("Você acertou: a palavra tem a letra %c\n\n", chute);
-    } else {
-        printf("\nVocê errou: a palavra NÃO tem a letra %c\n\n", chute);
-    }
+    if (letraexiste(chute)) printf("Você acertou: a palavra tem a letra %c\n\n", chute); 
+    else printf("\nVocê errou: a palavra NÃO tem a letra %c\n\n", chute);
 
     chutes[chutesdados] = chute;
     chutesdados++;
@@ -92,11 +86,8 @@ void desenhaforca() {
 
     for (int i = 0; i < strlen(palavrasecreta); i++) {
 
-        if (jachutou(palavrasecreta[i])) {
-            printf("%c ", palavrasecreta[i]);
-        } else {
-            printf("_ ");
-        }
+        if (jachutou(palavrasecreta[i])) printf("%c ", palavrasecreta[i]); 
+        else printf("_ ");
 
     }
     printf("\n");
@@ -118,9 +109,7 @@ void escolhepalavra() {
     srand(time(0));
     int randomico = rand() % qtddepalavras;
 
-    for (int i = 0; i <= randomico; i++) {
-        fscanf(f, "%s", palavrasecreta);
-    }
+    for (int i = 0; i <= randomico; i++) fscanf(f, "%s", palavrasecreta);
 
     fclose(f);
 }
