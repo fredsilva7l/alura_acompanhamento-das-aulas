@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int sensorMao;
+    int sensorNivel;
+    int alarme;
+
+    printf("digite um valor para a \n");
+    scanf("%d", & sensorMao);
+    printf("digite um valor para b \n");
+    scanf("%d", & sensorNivel);
+    printf("digite um valor para c \n");
+    scanf("%d", & alarme);
+
+    if (sensorMao & sensorNivel & alarme == 1) printf("liga bomba \n");
+    else printf("bomba não ligar \n");
+
+    if (alarme == 1) printf("sistema ok \n");
+    else printf("acende led de alarme \n ");
+
+    return 0;
+}
