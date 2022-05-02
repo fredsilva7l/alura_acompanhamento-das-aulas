@@ -116,5 +116,5 @@ function iniciaValor(){
 //console.log(pronunciaHoras());
 //console.log(pronunciaCorreta());
 console.log("inicio do teste");
-for(var i = 0;i < 100;i++) console.log(iniciaValor());
+for(var i = 0;i < 1;i++) console.log(iniciaValor());
 console.log("fim");
